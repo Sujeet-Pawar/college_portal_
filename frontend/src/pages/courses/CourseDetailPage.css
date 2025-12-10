@@ -1,0 +1,67 @@
+.course-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.course-detail-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.course-detail-code {
+  color: var(--muted-foreground);
+}
+
+.course-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignments-list,
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignment-item,
+.resource-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.assignment-title,
+.resource-title {
+  font-weight: 500;
+}
+
+.assignment-due-date,
+.resource-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.empty-message {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+

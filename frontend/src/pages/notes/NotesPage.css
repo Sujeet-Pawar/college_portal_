@@ -1,0 +1,352 @@
+.notes-page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.loading-container {
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  height: 2rem;
+  width: 2rem;
+  border: 4px solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 9999px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.notes-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .notes-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.notes-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notes-helper-text {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  max-width: 520px;
+}
+
+.notes-header-actions > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notes-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.notes-subtitle {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+.notes-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 0.75rem;
+}
+
+.notes-filter-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+}
+
+.notes-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.notes-filter-button {
+  font-size: 0.875rem;
+}
+
+.notes-filter-button.active {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.notes-course-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.notes-course-filter select {
+  background: rgba(15, 23, 42, 0.45);
+  color: var(--foreground);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.notes-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.notes-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.notes-group-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.notes-group-header p {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.notes-card {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 0.75rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.6), rgba(17, 24, 39, 0.45));
+}
+
+.notes-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notes-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notes-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.notes-card-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+.notes-card-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.notes-card-tag-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.notes-card-tag-gray {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.notes-card-tag-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.notes-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+.notes-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.notes-card-course {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.notes-card-subject {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.notes-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.notes-action-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.notes-upload-card {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.notes-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.notes-upload-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .notes-upload-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.notes-upload-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.notes-upload-field label {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.notes-upload-field input,
+.notes-upload-field select,
+.notes-upload-field textarea {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.45);
+  color: var(--foreground);
+  padding: 0.6rem 0.75rem;
+}
+
+.notes-upload-field textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.notes-upload-field--wide {
+  grid-column: 1 / -1;
+}
+
+.notes-upload-field--file input[type="file"] {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--foreground);
+}
+
+.notes-upload-file-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.notes-upload-file-name {
+  font-size: 0.85rem;
+  color: var(--foreground);
+}
+
+.notes-upload-file-placeholder {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+.notes-upload-hint {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.notes-upload-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.notes-upload-disclaimer {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notes-filter-buttons {
+    flex-direction: column;
+  }
+
+  .notes-course-filter {
+    width: 100%;
+  }
+}
+

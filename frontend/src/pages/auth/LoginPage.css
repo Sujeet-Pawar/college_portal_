@@ -1,0 +1,106 @@
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #dbeafe, #e0e7ff);
+  padding: 1rem;
+}
+
+.dark .login-page {
+  background: linear-gradient(to bottom right, #1a1a1a, #1f2937);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.login-card {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.login-description {
+  text-align: center;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-content .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-content label {
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.login-content input {
+  color: var(--foreground) !important;
+  background-color: var(--background) !important;
+}
+
+.login-content input::placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.6;
+}
+
+.password-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forgot-password-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.login-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.login-signup {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.signup-link {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+

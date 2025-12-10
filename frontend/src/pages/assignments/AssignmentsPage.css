@@ -1,0 +1,417 @@
+.assignments-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.assignments-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.assignments-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.assignments-subtitle {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+.assignments-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.assignment-stat-card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.assignment-stat-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.assignment-stat-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--primary);
+}
+
+.assignment-stat-info {
+  flex: 1;
+}
+
+.assignment-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.assignment-stat-label {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.assignments-search {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  height: 1rem;
+  width: 1rem;
+  color: var(--muted-foreground);
+}
+
+.search-input {
+  padding-left: 2.25rem;
+}
+
+.assignments-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tab-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tab-badge {
+  margin-left: 0.25rem;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignment-card {
+  transition: box-shadow 0.2s;
+}
+
+.assignment-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.assignment-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.assignment-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignment-status {
+  display: flex;
+  align-items: center;
+}
+
+.assignment-status-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.assignment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.assignment-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.assignment-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}
+
+.assignment-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.assignment-detail-item {
+  display: inline-block;
+}
+
+.assignment-submit-button {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.empty-content {
+  padding: 3rem;
+  text-align: center;
+}
+
+.empty-message {
+  color: var(--muted-foreground);
+}
+
+/* Faculty grading view */
+.faculty-submission-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(145deg, rgba(32, 32, 40, 0.6), rgba(24, 24, 32, 0.35));
+  box-shadow: 0 12px 24px -18px rgba(0, 0, 0, 0.6);
+}
+
+.faculty-submission-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .faculty-submission-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.faculty-submission-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faculty-submission-name {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.faculty-submission-email {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.submission-timestamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.faculty-submission-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.submission-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.submission-file-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.submission-file-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--primary-foreground);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.submission-file-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px -12px rgba(37, 99, 235, 0.6);
+}
+
+.submission-file-button svg {
+  color: var(--primary);
+}
+
+.grade-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: rgba(15, 15, 24, 0.55);
+}
+
+.grade-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+.grade-panel-note {
+  font-size: 0.75rem;
+  color: var(--destructive);
+}
+
+.grade-fields {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grade-fields {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+.grade-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.grade-field-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.grade-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.grade-input {
+  width: 100%;
+  max-width: 90px;
+  border: none;
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.grade-input:focus {
+  outline: none;
+}
+
+.grade-input-max {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+.grade-field--feedback .grade-field-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.grade-textarea {
+  min-height: 72px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.35);
+  color: var(--foreground);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grade-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.grade-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .grade-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.grade-save-button {
+  min-width: 140px;
+}
+
+.grade-status {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.grade-status--success {
+  color: #34d399;
+}
+
+.grade-status--error {
+  color: #f87171;
+}
+
+.grade-status--info {
+  color: #60a5fa;
+}
+

@@ -1,0 +1,48 @@
+# Node dependencies
+node_modules/
+
+# Build outputs
+frontend/dist/
+backend/dist/
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+
+# Environment files
+.env
+.env.*
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing artifacts
+.junit/
+
+# Local database dumps
+*.sqlite
+*.db
+
+# Misc
+*.swp
+*.swo

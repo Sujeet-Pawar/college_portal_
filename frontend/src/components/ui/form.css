@@ -1,0 +1,25 @@
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-message {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--destructive);
+  margin-top: 0.25rem;
+}
+
+.form-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
