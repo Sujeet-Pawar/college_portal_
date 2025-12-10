@@ -21,7 +21,7 @@ A full-stack college management platform that unifies course scheduling, assignm
 
 ### Platform Capabilities
 - Real-time notifications via Socket.io
-- Responsive UI crafted with Tailwind CSS + Framer Motion
+- Responsive UI crafted with Tailwind CSS and Framer Motion
 - Strong validation with React Hook Form and Zod
 
 ## Tech Stack
@@ -42,20 +42,20 @@ A full-stack college management platform that unifies course scheduling, assignm
 ### Installation
 
 1. **Clone the repository**
-   `ash
+   ```bash
    git clone https://github.com/Sujeet-Pawar/college_portal_.git
    cd college-portal
-   `
+   ```
 
 2. **Install dependencies**
-   `ash
+   ```bash
    npm run install:all
-   `
+   ```
 
 3. **Configure environment variables**
 
-   Create ackend/.env:
-   `env
+   Create `backend/.env`:
+   ```env
    PORT=5000
    NODE_ENV=development
    MONGO_URI=mongodb://localhost:27017/college-portal
@@ -63,24 +63,24 @@ A full-stack college management platform that unifies course scheduling, assignm
    JWT_EXPIRE=30d
    JWT_COOKIE_EXPIRE=30
    FRONTEND_URL=http://localhost:5173
-   `
+   ```
 
-   Create rontend/.env:
-   `env
+   Create `frontend/.env`:
+   ```env
    VITE_API_URL=http://localhost:5000/api/v1
-   `
+   ```
 
 4. **Start MongoDB** so the API can connect.
 
 5. **Run the application**
-   `ash
+   ```bash
    npm run dev            # runs backend + frontend together
-   `
+   ```
    Or run each side individually:
-   `ash
+   ```bash
    npm run dev:backend
    npm run dev:frontend
-   `
+   ```
 
 6. **Visit the app**
    - Frontend: http://localhost:5173
@@ -88,7 +88,7 @@ A full-stack college management platform that unifies course scheduling, assignm
 
 ## Project Structure
 
-`
+```text
 college-portal/
  backend/
     config/          # Environment & database setup
@@ -110,30 +110,23 @@ college-portal/
     package.json
  package.json         # Root scripts (install:all, dev, build)
  README.md
-`
+```
 
 ## Helpful Scripts
 
 | Location | Command               | Description |
 |----------|-----------------------|-------------|
-| Root     | 
-pm run install:all | Install dependencies for root + packages |
-| Root     | 
-pm run dev         | Concurrent backend & frontend dev servers |
-| Backend  | 
-pm run dev         | Nodemon API server |
-| Backend  | 
-pm run start       | Production Express server |
-| Frontend | 
-pm run dev         | Vite dev server |
-| Frontend | 
-pm run build       | Production build |
-| Frontend | 
-pm run preview     | Preview production output |
+| Root     | `npm run install:all` | Install dependencies for root + packages |
+| Root     | `npm run dev`         | Concurrent backend & frontend dev servers |
+| Backend  | `npm run dev`         | Nodemon API server |
+| Backend  | `npm run start`       | Production Express server |
+| Frontend | `npm run dev`         | Vite dev server |
+| Frontend | `npm run build`       | Production build |
+| Frontend | `npm run preview`     | Preview production output |
 
 ## API Snapshot
 
-- **Auth**: register  login  logout  GET /auth/me
+- **Auth**: register  login  logout  `GET /auth/me`
 - **Courses**: list  detail  create/update/delete (teacher/admin)  enroll (student)
 - **Assignments**: list  detail  create/update (teacher/admin)  submit  grade
 - **Dashboard**: aggregated stats for dashboards
@@ -141,15 +134,15 @@ pm run preview     | Preview production output |
 ## Seed Data
 
 Run the seed script to preload demo accounts, courses, assignments, and timetable slots:
-`ash
+```bash
 cd backend
 node scripts/seed.js
-`
+```
 Sample credentials:
 
-- Admin — dmin@college.edu / admin123
-- Teachers — john.smith@college.edu, sarah.johnson@college.edu, priya.menon@college.edu, miguel.santos@college.edu (password 	eacher123)
-- Students — preloaded per department (password student123)
+- Admin — `admin@college.edu / admin123`
+- Teachers — `john.smith@college.edu`, `sarah.johnson@college.edu`, `priya.menon@college.edu`, `miguel.santos@college.edu` (password `teacher123`)
+- Students — preloaded per department (password `student123`)
 
 ## Contributing
 
@@ -163,4 +156,4 @@ Released under the ISC License.
 
 ## Support
 
-Open an issue or contact support@collegeportal.com for help.
+Open an issue or contact `support@collegeportal.com` for help.
